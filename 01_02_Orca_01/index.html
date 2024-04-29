@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[chnclkj]的个人博客">
+<meta name="author" content="kveln">
+<title>ORCA_01、非双泛函wB97泛函的选择 | chnclkj</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="ORCA_01、非双泛函wB97泛函的选择 | chnclkj » Feed"
+  href="https://chnclkj.github.io/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://chnclkj.github.io/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="ORCA_01、非双泛函wB97泛函的选择" />
+  <meta property="og:url" content="https://chnclkj.github.io/01_02_Orca_01/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="chnclkj" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://chnclkj.github.io/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://chnclkj.github.io/Study/" class="tag">学习</a>
+                
+              </span>
+              <h1>ORCA_01、非双泛函wB97泛函的选择</h1>
+              <span class="meta">
+                Posted on
+                2023-10-16，5 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h2 id="orca_01-非双泛函wb97泛函的选择">ORCA_01、非双泛函wB97泛函的选择</h2>
+<p>个人总结：</p>
+<ul>
+<li>wB97X-V<strong>自带vv10的色散力</strong>的矫正，因此不需要额外的DFT-D3或者DFT-D3参数；</li>
+<li>wB97X-V比wB97M-V逊色，但是不会出现收敛难的问题。</li>
+</ul>
+<blockquote>
+<p>wB97XD是08年蔡政达和Head-Gordon搞的，之后还搞了双杂化泛函wB97X-2（2009年）。蔡政达后来回台湾了，又搞了wB97X-D3（用的DFT-D3(0)，2013年）。wB97X-V（2014年）和wB97M-V（2016年）和是Head-Gordon和他学生Mardirossian搞的；此外，他俩还搞了纯泛函B97M-rV（2017年）和双杂化泛函wB97M(2)（2018年）。还另有其他人搞了wB97X-D3(BJ)。<br>
+上述的杂化泛函中，整体精度：wB97M-V&gt;=wB97X-V&gt;wB97X-D3&gt;=wB97XD<br>
+wB97M-V是双杂化泛函以外的最顶级泛函（至少对主族而言），不少情况甚至超过双杂化泛函当中中庸的。但wB97M-V和wB97X-V由于都带VV10色散校正，没有解析梯度，所以最大不足是不适合做几何优化（可以用wB97XD或者wB97X-D3代替），而且实现相对复杂。<br>
+对于过渡金属谨慎使用wB97系列，因为此系列主要对主族参数化。但也有测试文章发现wB97M-V算过渡金属相关能量问题的结果也很好，见J. Chem. Theory Comput., 15, 3610 (2019)，但这方面有待更多更广泛的测试。<br>
+这些泛函在此文里也有相关介绍<br>
+详谈Multiwfn产生ORCA量子化学程序的输入文件的功能<br>
+http://sobereva.com/490（http://bbs.keinsci.com/thread-13560-1-1.html）<br>
+简谈量子化学计算中DFT泛函的选择<br>
+http://sobereva.com/272（http://bbs.keinsci.com/thread-536-1-1.html）<br>
+由于wB97M-V整体（但不是所有项目都）强于wB97X-V，所以一般没必要用wB97X-V。但我在研究18碳环二聚体时发现wB97M-V结合QZ基组经常SCF非常难收敛，所以碰到特殊情况可以用wB97X-V凑合代替。<br>
+wB97XD绝对不是wB97X简简单单加上DFT-D2那么简单，泛函本身的参数也有明显不同，仔细看原文便知，不要靠猜。<br>
+wB97XD就一个定义，在所有程序里都一样，Gaussian里的实现没有任何特殊性。<br>
+“高斯里的wb97xd其实是d3”显然是错的。Gaussian里没有任何泛函结尾是D的但实际用的是D3。末尾直接是D的一律都是带D2的，如B97D、B2PLYPD、mPW2PLYPD，而带D3的一律末尾都是明确写的D3，如B97D3、B2PLYPD3。</p>
+</blockquote>
+<blockquote>
+<p>2016年提出的wB97M-V基本上是所有非双杂化泛函里算基态能量方面问题的平均精度最高的，虽然在参数化过程中主要考虑的是主族，但很多文章测试发现它对于含过渡金属的体系的表现也极好。但此泛函只有ORCA、Q-Chem等极少数程序支持，而最主流的Gaussian（截止到G16 C.01）尚不支持。<br>
+ORCA挺好用，如果你肯用的话，那么在普通泛函的范畴里，很建议你计算能量的时候用wB97M-V，尽管它的耗时比B3LYP明显要高。不过如果你在ORCA里利用RIJCOSX技术加速的话，算较大体系时ORCA里用wB97M-V的耗时比Gaussian里计算B3LYP的耗时都低。注意ORCA从5.0开始虽然已支持了wB97M-V的解析梯度，但不支持解析Hessian，故振动分析极其昂贵。由于做优化之后通常需要做振动分析检验虚频，因此opt freq不建议用wB97M-V而建议用B3LYP-D3(BJ)，速度又快结果又不错，容易收敛，还不容易有虚频。但wB97M-V至少在ORCA里有个问题就是SCF收敛难度往往较大，有时我发现改用比wB97M-V更早提出的wB97X-V更容易SCF收敛。wB97X-V各方面特征和wB97M-V相近，虽然整体精度稍逊一点（不过仍远好于更老的wB97XD），但在计算过渡金属体系上根据有的文章的测试还更好一点。PS：虽然wB97M带DFT-D3(BJ)或DFT-D4校正的版本可以算解析梯度，但我还发现ORCA（至少是5.0）里wB97M-D3(BJ)或wB97M-D4做振动分析时候CPSCF往往很难收敛，而wB97X带色散校正的版本都没这个问题。故总的来说wB97M开头的泛函我建议只在算单点时候用。</p>
+</blockquote>
+<p>注意：<br>
+Orca输出文件中，Total Energy after outlying charge correction肯定不包含D3，因为D3是在输出这个量之后才输出的。最后的Final才是包含D3的。</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#orca_01-%E9%9D%9E%E5%8F%8C%E6%B3%9B%E5%87%BDwb97%E6%B3%9B%E5%87%BD%E7%9A%84%E9%80%89%E6%8B%A9">ORCA_01、非双泛函wB97泛函的选择</a></li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://chnclkj.github.io/01_02_Orca_02/">
+              <span class="post-title">
+                ORCA_02、基于wB97X-V的优化基组&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post//" class="leancloud_visitors"
+              data-flag-title="ORCA_01、非双泛函wB97泛函的选择">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'jRokyK6R1fVDHzST5d73ulF6-gzGzoHsz',
+		appKey: 'TKWiiX0CUgRRuNd18wOGkdpy',
+		avatar: '',
+		pageSize: 10,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://chnclkj.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>chnclkj</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://chnclkj.github.io/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://chnclkj.github.io/";
+        addScript("https://chnclkj.github.io/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://chnclkj.github.io/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

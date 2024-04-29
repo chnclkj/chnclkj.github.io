@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[chnclkj]的个人博客">
+<meta name="author" content="kveln">
+<title>Markdown_02、基本语法 | chnclkj</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="Markdown_02、基本语法 | chnclkj » Feed"
+  href="https://chnclkj.github.io/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://chnclkj.github.io/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="Markdown_02、基本语法" />
+  <meta property="og:url" content="https://chnclkj.github.io/01_01_Markdown_02/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="chnclkj" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://chnclkj.github.io/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://chnclkj.github.io/Study/" class="tag">学习</a>
+                
+              </span>
+              <h1>Markdown_02、基本语法</h1>
+              <span class="meta">
+                Posted on
+                2023-10-11，6 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="markdown常用语法编辑">Markdown常用语法——编辑</h1>
+<p>[TOC]</p>
+<h2 id="0-目录">0、目录</h2>
+<h3 id="1-生成目录">1、生成目录</h3>
+<p>&amp;semp;在文档开头第一行单独输入[TOC]，Markdown编辑器就会根据文档中的h1~h6标题自动生成目录。效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[TOC]</code><br><code># Heading level 1</code><br><code>## Heading level 2</code></td>
+<td>略</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-标题">1、标题</h2>
+<p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (\h3&gt;) (例如：### My Header)。</p>
+<p>注：标准语法一般在#后跟个空格再写文字；Markdown语法中最多支持6级标题。</p>
+<p>下面是示范例子</p>
+<pre><code># 这是一级标题
+## 这是二级标题
+### 这是三级标题
+#### 这是四级标题
+##### 这是五级标题
+###### 这是六级标题
+</code></pre>
+<p>实际显示：略。</p>
+<p>另外，在文本下方的行上，添加任意数量的“<strong>==</strong>”或“<strong>--</strong>”，用来代表“<strong>一级标题</strong>”或“<strong>二级标题</strong>”，我一般是写<strong>五个</strong>。</p>
+<pre><code>
+这是一级标题
+=====
+这是二级标题
+-----
+</code></pre>
+<h1 id="这是一级标题">这是一级标题</h1>
+<h2 id="这是二级标题">这是二级标题</h2>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code># Heading level 1</code></td>
+<td># Heading level 1</td>
+</tr>
+<tr>
+<td><code>## Heading level 2</code></td>
+<td>## Heading level 2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-字体的设置">2、字体的设置</h2>
+<h3 id="常见字体格式的设置">常见字体格式的设置</h3>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加粗</td>
+<td><code>**Future**</code></td>
+<td><strong>Future</strong></td>
+</tr>
+<tr>
+<td>斜体</td>
+<td><code>*Future*</code></td>
+<td><em>Future</em></td>
+</tr>
+<tr>
+<td>斜体加粗</td>
+<td><code>***Future***</code></td>
+<td><em><strong>Future</strong></em></td>
+</tr>
+<tr>
+<td>删除线</td>
+<td><code>~~Future~~</code></td>
+<td><s>Future</s></td>
+</tr>
+<tr>
+<td>上标</td>
+<td><code>~~Future~~</code></td>
+<td><s>Future</s></td>
+</tr>
+<tr>
+<td>下标</td>
+<td><code>~~Future~~</code></td>
+<td><s>Future</s></td>
+</tr>
+</tbody>
+</table>
+<h3 id="字体颜色的设置">字体颜色的设置</h3>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>变蓝</td>
+<td><code>&lt;font color=Aqua&gt;Test&lt;/font&gt;</code></td>
+<td><font color=Aqua>Test</font></td>
+</tr>
+</tbody>
+</table>
+<p>注：更多颜色的设置请查阅https://blog.csdn.net/u012028275/article/details/115445362</p>
+<h3 id="普通文本高亮">普通文本高亮</h3>
+<p>CommonMark中并未定义普通文本高亮。<br>
+CSDN中支持通过<code>==文本高亮==</code>，实现<mark>文本高亮</mark></p>
+<p>如果你使用的markdown编辑器不支持该便捷设置，可通过HTML标签<code>&lt;mark&gt;</code>实现：<br>
+语法：<code>&lt;mark&gt;文本高亮&lt;mark&gt;</code><br>
+效果：<mark>文本高亮<mark></p>
+<h2 id="3-段落">3、段落</h2>
+<p>使用空白行将一行或多行文本进行分隔。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>I really like using Markdown.</code> <br> <br><code>I think I'll use it to format all of my documents from now on.</code></td>
+<td>I really like using Markdown.<br> <br>I think I'll use it to format all of my documents from now on.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-换行">4、换行</h2>
+<p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<strong>&lt;br&gt;</strong>)。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown语法</th>
+<th>预览效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>This is the first line.</code><br><code>And this is the second line.</code></td>
+<td>This is the first line.<br>And this is the second line.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-引用">5、引用</h2>
+<p>要创建块引用，请在段落前添加一个 &gt; 符号。</p>
+<p><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.</code></p>
+<p>渲染效果如下所示：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+</blockquote>
+<p>多个段落的块引用<br>
+块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p>
+<pre><code class="language-cs">&gt; Dorothy followed her through many of the beautiful rooms in her castle.
+&gt;
+&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+</code></pre>
+<p>渲染效果如下：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+<p>#嵌套块引用<br>
+块引用可以嵌套。在要嵌套的段落前添加一个 &gt;&gt; 符号。</p>
+<pre><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.
+&gt;
+&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+</code></pre>
+<p>渲染效果如下：</p>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<blockquote>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+</blockquote>
+<h2 id="6-分割线">6、分割线</h2>
+<p>三个或者三个以上的 - 或者 * 或者_都可以。<br>
+示例：</p>
+<pre><code>---
+***
+___
+----
+****
+效果如下，都一样，没什么区别。
+____
+</code></pre>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="7-图片">7、图片</h2>
+<p>###（1）插入互联网上图片</p>
+<p>语法：</p>
+<pre><code>![图片描述](图片链接 ''图片title'')
+
+图片描述就是显示在图片下面的文字，相当于对图片内容的解释。
+图片title是图片的标题，当鼠标移到图片上时显示的内容。
+注意：title可加可不加
+</code></pre>
+<p>注意：这个图片描述可以不写。</p>
+<p>示例：<br>
+<code>![杀生丸](https://pic4.zhimg.com/80/v2-560623bcbaa438b1627578aa70f5b08c.png)</code><br>
+效果如下：<br>
+<img src="https://img1.qunarzz.com/travel/poi/1803/cf/5e8e95dd3cdb7a37.jpg_480x360x95_0dd1d432.jpg" alt="庐山瀑布" loading="lazy"><br>
+###（2）插入本地图片链接</p>
+<p>语法：</p>
+<p>![图片描述](图片本地路径 ''图片title'')<br>
+图片描述就是显示在图片下面的文字，相当于对图片内容的解释。<br>
+图片title是图片的标题，当鼠标移到图片上时显示的内容。<br>
+注意：title可加可不加<br>
+注意：这个图片描述可以不写。</p>
+<p>示例：</p>
+<p><code>![犬夜叉](./image/4b9565e605bccd55f8354609dcd7ebcb.jpg)</code><br>
+效果如下：<br>
+<img src="./../images/pexels-pixabay-161702-2.jpg" alt="主题图" loading="lazy"></p>
+<h2 id="8-超链接">8、超链接</h2>
+<p>语法：</p>
+<p><code>[超链接名](超链接地址 &quot;超链接title&quot;)</code><br>
+注：title可加可不加<br>
+示例：<br>
+<code>[知乎](https://www.zhihu.com/)</code><br>
+<code>[百度](https://www.baidu.com/)</code><br>
+效果如下：<br>
+<a href="https://www.zhihu.com/">知乎</a><br>
+<a href="https://www.baidu.com/">百度</a></p>
+<h2 id="9-列表">9、列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<p>语法：<br>
+无序列表用 - + * 任何一种都可以</p>
+<pre><code>- 无序列表内容
++ 无序列表内容
+* 无序列表内容
+</code></pre>
+<p>注意：- + * 跟内容之间都要有一个空格<br>
+效果如下：</p>
+<ul>
+<li>无序列表内容</li>
+</ul>
+<ul>
+<li>无序列表内容</li>
+</ul>
+<ul>
+<li>无序列表内容</li>
+</ul>
+<p>可以看到，显示效果是一样的。</p>
+<h3 id="有序列表语法">有序列表语法：</h3>
+<p>数字加点</p>
+<pre><code>
+</code></pre>
+<p>注意：序号跟内容之间要有空格<br>
+效果如下：</p>
+<ol>
+<li>有序列表内容</li>
+<li>有序列表内容</li>
+<li>有序列表内容</li>
+</ol>
+<p>列表嵌套</p>
+<p>上一级和下一级之间敲一个Tab键即可</p>
+<p>示例一、</p>
+<ul>
+<li>一级无序列表内容
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容<br>
+效果如下：</li>
+</ul>
+</li>
+</ul>
+<p>示例二、</p>
+<ul>
+<li>一级无序列表内容
+<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容<br>
+效果如下：</li>
+</ol>
+</li>
+</ul>
+<p>示例三、</p>
+<ol>
+<li>一级有序列表内容
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容<br>
+效果如下：</li>
+</ul>
+</li>
+</ol>
+<p>示例四、</p>
+<ol start="2">
+<li>一级有序列表内容
+<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容<br>
+效果如下：</li>
+</ol>
+</li>
+</ol>
+<p>八、表格</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E7%BC%96%E8%BE%91">Markdown常用语法——编辑</a>
+<ul>
+<li><a href="#0-%E7%9B%AE%E5%BD%95">0、目录</a>
+<ul>
+<li><a href="#1-%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95">1、生成目录</a></li>
+</ul>
+</li>
+<li><a href="#1-%E6%A0%87%E9%A2%98">1、标题</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%99%E6%98%AF%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98">这是一级标题</a>
+<ul>
+<li><a href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98">这是二级标题</a></li>
+<li><a href="#2-%E5%AD%97%E4%BD%93%E7%9A%84%E8%AE%BE%E7%BD%AE">2、字体的设置</a>
+<ul>
+<li><a href="#%E5%B8%B8%E8%A7%81%E5%AD%97%E4%BD%93%E6%A0%BC%E5%BC%8F%E7%9A%84%E8%AE%BE%E7%BD%AE">常见字体格式的设置</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E7%9A%84%E8%AE%BE%E7%BD%AE">字体颜色的设置</a></li>
+<li><a href="#%E6%99%AE%E9%80%9A%E6%96%87%E6%9C%AC%E9%AB%98%E4%BA%AE">普通文本高亮</a></li>
+</ul>
+</li>
+<li><a href="#3-%E6%AE%B5%E8%90%BD">3、段落</a></li>
+<li><a href="#4-%E6%8D%A2%E8%A1%8C">4、换行</a></li>
+<li><a href="#5-%E5%BC%95%E7%94%A8">5、引用</a></li>
+<li><a href="#6-%E5%88%86%E5%89%B2%E7%BA%BF">6、分割线</a></li>
+<li><a href="#7-%E5%9B%BE%E7%89%87">7、图片</a></li>
+<li><a href="#8-%E8%B6%85%E9%93%BE%E6%8E%A5">8、超链接</a></li>
+<li><a href="#9-%E5%88%97%E8%A1%A8">9、列表</a>
+<ul>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
+<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E8%AF%AD%E6%B3%95">有序列表语法：</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://chnclkj.github.io/01_01_Markdown_03/">
+              <span class="post-title">
+                Markdown_03、字体颜色设置&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post//" class="leancloud_visitors"
+              data-flag-title="Markdown_02、基本语法">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'jRokyK6R1fVDHzST5d73ulF6-gzGzoHsz',
+		appKey: 'TKWiiX0CUgRRuNd18wOGkdpy',
+		avatar: '',
+		pageSize: 10,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://chnclkj.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>chnclkj</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://chnclkj.github.io/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://chnclkj.github.io/";
+        addScript("https://chnclkj.github.io/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://chnclkj.github.io/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

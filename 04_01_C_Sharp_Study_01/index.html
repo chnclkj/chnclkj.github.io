@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[chnclkj]的个人博客">
+<meta name="author" content="kveln">
+<title>C#学习 | chnclkj</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="C#学习 | chnclkj » Feed"
+  href="https://chnclkj.github.io/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://chnclkj.github.io/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="C#学习" />
+  <meta property="og:url" content="https://chnclkj.github.io/04_01_C_Sharp_Study_01/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="chnclkj" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://chnclkj.github.io/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://chnclkj.github.io/Future/" class="tag">Future</a>
+                
+              </span>
+              <h1>C#学习</h1>
+              <span class="meta">
+                Posted on
+                2024-04-26，10 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <p>这是学习C#语言的记录，谨以此记录。</p>
+<!-- more -->
+<h2 id="c从入门到精通第六版">《C#从入门到精通》第六版</h2>
+<p>  2024年04月26日，重新启动C#学习，并重新开始学习。<br>
+  书籍：《C#从入门到精通》</p>
+<h3 id="第一节-安装c及开发环境">第一节、安装C#及开发环境</h3>
+<h3 id="第二节-开始c之旅">第二节、开始C#之旅</h3>
+<p>  <strong>2.1 Hello World</strong><br>
+  C#程序基本结构<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-01.png" alt="Alt text" loading="lazy"></p>
+<h4 id="21-命名空间">2.1、命名空间</h4>
+<p>C#程序中的一种代码组织形式，主要用来标识<em><strong>类</strong></em>的可见范围，即命名空间<strong>必须</strong>加上类。<br>
+语法：<code>namespace+命名空间</code><br>
+引用：<code>using+命名空间;</code>，切记 <strong>;</strong> 不能丢。<br>
+PS：将自动生成与项目名称相同的命名空间。<br>
+举例：当未引用Test时，报错，如下图<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-02.png" alt="Alt text" loading="lazy"><br>
+然后将Demo引用，即错误消除：<br>
+<code>using Demo;</code></p>
+<h4 id="22-类">2.2、类</h4>
+<p>一种数据结构，存储数据成员、方法成员和其它类等内容，便于调用。<br>
+语法：</p>
+<pre><code>class  类名
+{
+      // 类中的代码
+}
+</code></pre>
+<p>PS：a）一个命名空间中可以有许多类；b）同一个命名空间中两个类的名称不能相同。</p>
+<h4 id="23-main方法程序的启动器">2.3、Main方法：程序的启动器</h4>
+<p>C#程序可以分为<strong>控制台程序</strong>和<strong>窗体程序</strong>，即<strong>CMD命令</strong>和<strong>应用软件</strong>，由<strong>Main</strong>来确定它的类型。<br>
+基本要求：<br>
+1）、Main方法必须定义为<strong>static</strong>;<br>
+2）、Main的首字母必须大写；<br>
+3）、返回值只有两种，<strong>void</strong>和<strong>int</strong>；<br>
+4）、命令行参数可选可不选，即Main后面括号内的内容可以删除，删除后程序可正常运行；<br>
+PS：使用<strong>void</strong>时，不会有返回值；使用<strong>int</strong>时，需要在代码中<strong>必须</strong>添加<code>return+数字;</code>。<br>
+语法：</p>
+<pre><code>static void Main ( string[ ] args )  {  }
+static void Main ( ) {  }
+static int  Main ( string[ ] args )  {  }
+static int  Main ( ) {  }
+</code></pre>
+<p>常见错误提示1：<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-03.png" alt="Alt text" loading="lazy"><br>
+原因：1）没有Main方法；2）Main小写成main；3）没有使用static；<br>
+常见错误提示2：<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-04.png" alt="Alt text" loading="lazy"><br>
+原因：Main方法的返回值不是void或者int。<br>
+常见错误提示3：<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-05.png" alt="Alt text" loading="lazy"><br>
+原因：项目有多个入口，即有多个Main方法，需要在项目-属性-应用程序-启动对象中，设置默认的启动对象。</p>
+<h4 id="24-标识符">2.4、标识符</h4>
+<p>即名字，但是取名需要规范，具体如下：<br>
+首字母：1）字母；2）下划线‘ _ ’；3）首字母<strong>不能使用数字</strong>开头；<br>
+其余部分：任意多的：1）数字；2）字母；3）下划线‘_’；<br>
+注意事项：<br>
+1）标识符不能与C#关键字冲突，如<code>int static = 30;</code>是错误的；<br>
+2）标识符是区分大小写的，如<code>int age = 30;</code>与<code>int Age = 30;</code>是两个标识符;<br>
+3）标识符中不能使用<strong>百分号%</strong>。<br>
+<strong>C#常见关键词</strong>：程序中显示蓝色的字。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>public</td>
+<td>this</td>
+<td>finally</td>
+<td>boolean</td>
+<td>abstract</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>float</td>
+<td>long</td>
+<td>short</td>
+<td>throw</td>
+<td>return</td>
+</tr>
+<tr>
+<td>break</td>
+<td>for</td>
+<td>foreach</td>
+<td>static</td>
+<td>new</td>
+<td>interface</td>
+</tr>
+<tr>
+<td>if</td>
+<td>goto</td>
+<td>default</td>
+<td>byte</td>
+<td>do</td>
+<td>case</td>
+</tr>
+<tr>
+<td>void</td>
+<td>try</td>
+<td>switch</td>
+<td>else</td>
+<td>catch</td>
+<td>private</td>
+</tr>
+<tr>
+<td>double</td>
+<td>protected</td>
+<td>while</td>
+<td>char</td>
+<td>class</td>
+<td>using</td>
+</tr>
+</tbody>
+</table>
+<h4 id="25-c中的语句">2.5、C#中的语句</h4>
+<p>C#语句实质上就是实现各种功能的C#代码，最基本的程序构成单位。</p>
+<h4 id="26-注释解释说明">2.6、注释：解释说明</h4>
+<p>1）行注释：<br>
+使用双斜杠<code>//</code>来表示，后面接注释的内容。同一行后续输入将不参与运行。<br>
+2）块注释：连续多行代码注释。</p>
+<pre><code>/*
+ * 版权
+ * 日期
+ * 人员
+ */
+</code></pre>
+<p>3）注释的作用：解释说明；不运行代码。<br>
+快捷按钮：工具栏，注释选中行，取消对选中行的注释；<br>
+快捷键：Ctrl+K,Ctrl+C；Ctrl+K,Ctrl+U。</p>
+<h4 id="27-程序编写规范">2.7、程序编写规范</h4>
+<p>1）代码编写规则（<strong>死记硬背</strong>）：</p>
+<ul>
+<li>尽量使用接口编程；</li>
+<li>关键语句一定要编写注释；</li>
+<li>局部变量随用随声明；</li>
+<li>尽量少用goto语句；</li>
+<li>如果参数多，建议使用结构；</li>
+<li>避免对大段代码使用try...catch；</li>
+<li>同一个文件中避免编写多个类；</li>
+<li>字符串多变时，用StringBuilder；</li>
+<li>if语句块中使用“{ }”；</li>
+<li>switch语句中一定编写default；</li>
+</ul>
+<p>2）常用的两种命名方法：</p>
+<ul>
+<li>Pascal命名法：所有单词第一个字母大写，其它字母小写，如<strong>User</strong>、<strong>GetInfo</strong>。</li>
+<li>Camel命名法（驼峰命名法）：除了第一个单词，所有单词第一个字母大写，其它字母小写，如<strong>userId</strong>，<strong>userName</strong>。</li>
+</ul>
+<p>3）程序中各元素的命名规范：</p>
+<ul>
+<li>项目名：公司域名+项目名称，如：mingrisoft.ERP；</li>
+<li>命名空间名：公司名称/产品名称；</li>
+<li>接口：一切接口都用大写字母“I”开头；</li>
+<li>类名：功能与操作的完美结合；</li>
+<li>方法名：动宾关系，实现何种操作；</li>
+<li>成员变量：尽可能加前缀“ _ ”。</li>
+</ul>
+<h4 id="28-输出文字及窗口停留">2.8、输出文字及窗口停留</h4>
+<pre><code>//Write：输出后不会换行，光标定位在同一行的最后。
+Console.Write(&quot;人因梦想而伟大&quot;);
+Console.WriteLine(&quot;             ——雷军&quot;);
+Console.ReadLine();//光标停留
+</code></pre>
+<p>代码显示：<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-06.png" alt="Alt text" loading="lazy"></p>
+<pre><code>//WriteLine：输出后会换行，光标定位到下一行的开始。
+Console.WriteLine(&quot;人因梦想而伟大&quot;);
+Console.WriteLine(&quot;             ——雷军&quot;);
+Console.ReadLine();//光标停留
+</code></pre>
+<p>代码显示：<br>
+<img src="https://chnclkj.github.io/post-images/04_01_C_Sharp_Study_01/image-07.png" alt="Alt text" loading="lazy"><br>
+2、输出文字时光标停留<br>
+<code>Console.ReadLine();//光标停留</code></p>
+<p>同时输出多个变量：</p>
+<pre><code>Console.WriteLine(string.Format(&quot;{0} {4} {2} {2} {2}&quot;, money1, money2, money3, money4, money5));
+</code></pre>
+<p>变量与表达式 中提到System.Console.WriteLine({0}，{1},myString,myInteger);输出多个参数时，“每个占位符用一对{ }中加一个整数来表示。整数从0开始，每次递增1，占位符的总数应等于列表中指定的变量数，该列表用逗号分隔开，跟在字符串后面。”<br>
+实际上只要占位符的第1个整数为0就可以，其他整数小于变量总数就可以，不必每次递增1，也不必占位符的个数和变量的个数相等，但是占位符中的整数代表了变量列表的索引值。</p>
+<h3 id="第三节-变量与常量">第三节、变量与常量</h3>
+<h4 id="31-变量的基本概念">3.1、变量的基本概念</h4>
+<p>概念：一个变量就是存储区（内存）中的一个<strong>存储</strong>单元。</p>
+<h4 id="32-变量的声明及赋值">3.2、变量的声明及赋值</h4>
+<p>1、使用变量的步骤</p>
+<ul>
+<li>声明一个变量：根据类型分配空间；</li>
+<li>初试化变量：将数据存入内存空间；</li>
+<li>使用变量：去除数据使用。</li>
+</ul>
+<p>2、变量的声明<br>
+1）语法：<br>
+语法一：</p>
+<ul>
+<li>变量类型 变量名 = 数值 <code>int money = 1000;</code></li>
+</ul>
+<p>语法二：</p>
+<ul>
+<li>变量类型 变量名；<code>int money;</code></li>
+<li>变量名 = 数值；<code>money = 1000;</code></li>
+</ul>
+<p>语法三：变量类型一致时，</p>
+<ul>
+<li>变量类型 变量名1,变量名2,...,变量名n; <code>int money1,money2,...,moneyn;</code></li>
+</ul>
+<p>2）变量的命名规则：<br>
+取名需要规范，具体如下：<br>
+首字母：1）字母；2）下划线‘ _ ’；3）首字母<strong>不能使用数字</strong>开头；<br>
+其余部分：任意多的：1）数字；2）字母；3）下划线‘_’；<br>
+<strong>注</strong>：</p>
+<ul>
+<li>首字母只能是<strong>字母</strong>或下划线&quot; _ &quot;。</li>
+<li>基本要求：简短且能清楚地表明变量的作用，通常第一个单词的首字母小写，其后单词的首字母大写。例如：myScore。</li>
+<li>变量不能与C#关键字冲突；</li>
+<li>变量严格区分大小写，即age和Age表示不一样的变量；</li>
+<li>变量里面不能带特殊符号（%，$）和<strong>空格</strong>。</li>
+<li>在C#语言中，允许使用汉字作为变量名，在程序运行时并不会出现什么错误，但建议读者尽量不要使用汉字作为变量名。</li>
+</ul>
+<p>3）变量的初始化：使用变量前必须初始化——即赋值。<br>
+<code>money = 368;</code>在这里**=**为赋值运算符，将<strong>右边</strong>的数赋值给<strong>左边</strong>的变量。<br>
+使用方法：</p>
+<ul>
+<li>单独变量初始化</li>
+</ul>
+<blockquote>
+<p>int sum;<br>
+sun = 368;</p>
+</blockquote>
+<ul>
+<li>声明时初始化变量</li>
+</ul>
+<blockquote>
+<p>sun = 368;</p>
+</blockquote>
+<ul>
+<li>同时初始化多个变量</li>
+</ul>
+<blockquote>
+<p>int a,b,c,d,e;<br>
+a = b = c = d = e = 0;</p>
+</blockquote>
+<blockquote>
+<p>string s1, s2, s3;<br>
+s1 = s2 = s3 = &quot;ling&quot;;</p>
+</blockquote>
+<p>也可以使用已经赋值的变量对新的变量赋值。</p>
+<blockquote>
+<p>string title2 = title;<br>
+Console.WriteLine(&quot;title2 = {0}&quot;,title2);</p>
+</blockquote>
+<p>4）变量的作用域<br>
+类体：成员变量（全体变量），只要该方法在类中，就都可以使用；分为两种，静态变量和实例变量，主要区别是有没有关键词<strong>static</strong>。使用静态变量时，直接使用类的名称进行调用；若使用实例变量，则首先需要创立类的对象，然后再使用对象进行调用。</p>
+<blockquote>
+<p>static int x = 90; //静态变量<br>
+int x = 45; //实例变量；</p>
+</blockquote>
+<pre><code>static void Main(string[] args)
+  {
+      //静态方法中调用静态变量
+      Console.WriteLine(str2);
+      //静态方法中调用实例变量
+      Program p = new Program();
+      Console.WriteLine(p.str);
+</code></pre>
+<p>方法体：局部变量，只能在该方法中使用，不能再其他方法体中使用。</p>
+<pre><code>//实例：输入并显示用户名
+Console.WriteLine(&quot;Welcome to China!&quot;);
+Console.WriteLine(&quot;Please input your username:&quot;);
+String username = Console.ReadLine();
+Console.WriteLine(&quot;The current user is &quot;+username);
+</code></pre>
+<p>常见错误1：</p>
+<blockquote>
+<p>String title;<br>
+Console.WriteLine(title);</p>
+</blockquote>
+<p>报错：使用了未赋值的局部变量“title”。<br>
+纠错：<code>String title = &quot;CYU&quot;;</code></p>
+<p>常见错误2：</p>
+<blockquote>
+<p>int %hour = 18;<br>
+Console.WriteLine(%hour);</p>
+</blockquote>
+<p>报错：无效的表达式项“%”。<br>
+纠错：<code>int hour = 18;</code>，变量的命名不能以特殊符号开始。</p>
+<p>常见错误3：</p>
+<blockquote>
+<p>String name = &quot;san&quot;;<br>
+String name = &quot;si&quot;;</p>
+</blockquote>
+<p>报错：已在此范围定义了名为“name”的局部变量。<br>
+纠错：<code>String Name = &quot;si&quot;;</code>，变量的命名不能重复。</p>
+<p>3、变量的类型：数据类型</p>
+<ul>
+<li>值类型：
+<ul>
+<li>简单：整数、实数、字符、布尔；</li>
+<li>复合：结构，枚举；</li>
+</ul>
+</li>
+<li>引用类型：类、接口、数组、委托；</li>
+</ul>
+<p>1）值类型：直接储存值，对一个值类型的改变，并不会影响到另外一个值类型；<br>
+例：</p>
+<pre><code>int age = 30;
+int age2 = age;
+age2 = 35;
+Console.WriteLine(string.Format(&quot;{0} {1}&quot;, &quot;age=&quot; + age, &quot;age2=&quot; + age2));
+Console.WriteLine(&quot;age2=&quot; + age2);
+</code></pre>
+<p>输出为：</p>
+<pre><code>age=30 age2=35
+age2=35
+</code></pre>
+<ul>
+<li>简单类型：数值型（int/float），字符型（Char），布尔型（bool）。</li>
+</ul>
+<p><strong>整数类型：</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明（8位等于1字节）</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sbyte</td>
+<td>8位有符号整数</td>
+<td>-128~127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16位有符号整数</td>
+<td>-32768~32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32位有符号整数</td>
+<td>-2147483648~2147483647</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64位有符号整数</td>
+<td>-9223372036854775808~9223372036854775807</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>8位无符号整数</td>
+<td>0~255</td>
+</tr>
+<tr>
+<td>ushort</td>
+<td>16位无符号整数</td>
+<td>0~65535</td>
+</tr>
+<tr>
+<td>uint</td>
+<td>32位无符号整数</td>
+<td>0~4294967295</td>
+</tr>
+<tr>
+<td>ulong</td>
+<td>64位无符号整数</td>
+<td>0~18446744073709551615</td>
+</tr>
+</tbody>
+</table>
+<p>PS：前四种可以储存负数，而后四种无符号整数不能储存负数，如<code>unit n = -10;</code>，是错误的。</p>
+<p>  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  0.0~</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#c%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E7%AC%AC%E5%85%AD%E7%89%88">《C#从入门到精通》第六版</a>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E8%8A%82-%E5%AE%89%E8%A3%85c%E5%8F%8A%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">第一节、安装C#及开发环境</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E5%BC%80%E5%A7%8Bc%E4%B9%8B%E6%97%85">第二节、开始C#之旅</a>
+<ul>
+<li><a href="#21-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4">2.1、命名空间</a></li>
+<li><a href="#22-%E7%B1%BB">2.2、类</a></li>
+<li><a href="#23-main%E6%96%B9%E6%B3%95%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%90%AF%E5%8A%A8%E5%99%A8">2.3、Main方法：程序的启动器</a></li>
+<li><a href="#24-%E6%A0%87%E8%AF%86%E7%AC%A6">2.4、标识符</a></li>
+<li><a href="#25-c%E4%B8%AD%E7%9A%84%E8%AF%AD%E5%8F%A5">2.5、C#中的语句</a></li>
+<li><a href="#26-%E6%B3%A8%E9%87%8A%E8%A7%A3%E9%87%8A%E8%AF%B4%E6%98%8E">2.6、注释：解释说明</a></li>
+<li><a href="#27-%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%E8%A7%84%E8%8C%83">2.7、程序编写规范</a></li>
+<li><a href="#28-%E8%BE%93%E5%87%BA%E6%96%87%E5%AD%97%E5%8F%8A%E7%AA%97%E5%8F%A3%E5%81%9C%E7%95%99">2.8、输出文字及窗口停留</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E8%8A%82-%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B8%B8%E9%87%8F">第三节、变量与常量</a>
+<ul>
+<li><a href="#31-%E5%8F%98%E9%87%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">3.1、变量的基本概念</a></li>
+<li><a href="#32-%E5%8F%98%E9%87%8F%E7%9A%84%E5%A3%B0%E6%98%8E%E5%8F%8A%E8%B5%8B%E5%80%BC">3.2、变量的声明及赋值</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://chnclkj.github.io/02_02_jishi_bo_1/">
+              <span class="post-title">
+                考博事记1&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post//" class="leancloud_visitors"
+              data-flag-title="C#学习">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'jRokyK6R1fVDHzST5d73ulF6-gzGzoHsz',
+		appKey: 'TKWiiX0CUgRRuNd18wOGkdpy',
+		avatar: '',
+		pageSize: 10,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://chnclkj.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>chnclkj</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://chnclkj.github.io/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://chnclkj.github.io/";
+        addScript("https://chnclkj.github.io/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://chnclkj.github.io/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

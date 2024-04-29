@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[chnclkj]的个人博客">
+<meta name="author" content="kveln">
+<title>Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描 | chnclkj</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描 | chnclkj » Feed"
+  href="https://chnclkj.github.io/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://chnclkj.github.io/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描" />
+  <meta property="og:url" content="https://chnclkj.github.io/01_03_Gaussian_02/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="chnclkj" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://chnclkj.github.io">chnclkj</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_About">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Study">学习</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Note">记录</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Star">星星</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/Future">Future</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Unity">Unity</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_Navigation">导航</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="https://chnclkj.github.io/00_hello-gridea">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1714391557898"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://chnclkj.github.io/media/images/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://chnclkj.github.io/Study/" class="tag">学习</a>
+                
+              </span>
+              <h1>Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描</h1>
+              <span class="meta">
+                Posted on
+                2023-10-20，4 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <p>  Gaussian的使用，应当占据更大的比例。</p>
+<!-- more -->
+<h1 id="gaussian_01-基本计算">Gaussian_01、基本计算</h1>
+<p>  对于这种量子化学的计算，应该有着以下几个意识：<br>
+  -首先进行结构优化，即“input.gjf”中，计算类型为“<strong>opt</strong>”，注意基组和泛函可以用比较普适的，一般用DFT即可；<br>
+  -结构优化完即可着手进行单点能计算及频率计算，需要明白的一点是：单点能计算需要用更精确的泛函基组，而频率“<strong>freq</strong>”计算需要较为简单的泛函基组；<br>
+  -即计算的精度：单点能&gt;优化&gt;频率</p>
+<p>  此外，在整个计算过程中，需要明白一点是，尽量使用同一泛函和基组，以保证数据的可对比性；第二点就是尽可能使用精确度较高的泛函和基组。</p>
+<h1 id="一-单点能计算">一、单点能计算</h1>
+<h4 id="1-输入文件">1、输入文件</h4>
+<p>  下面是高斯输入文件的head，文件名的后缀必须为“.gjf”。</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz  
+</code></pre>
+<h1 id="二-结构优化">二、结构优化</h1>
+<h4 id="1-输入文件-2">1、输入文件</h4>
+<p>  下面是高斯输入文件的head，文件名的后缀必须为“.gjf”。</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz  opt
+</code></pre>
+<p>  PS：可以看到，与单点能计算不同的是，只是在计算的命令行中增加了“<strong>opt</strong>”这一关键词。</p>
+<h1 id="三-频率计算">三、频率计算</h1>
+<h4 id="1-输入文件-3">1、输入文件</h4>
+<p>  下面是高斯输入文件的head，文件名的后缀必须为“.gjf”。</p>
+<p>频率计算有两种方式，一种是在输入的命令行中同时加上“<strong>opt</strong>”和“<strong>freq</strong>”,</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz  opt freq
+</code></pre>
+<p>  或者拿结构优化后的文件原子位置用“<strong>opt</strong>”进行计算。</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz  freq
+</code></pre>
+<p>  需要注意的是，频率的二次计算也分为两种，一种是直接使用优化好的原子坐标进行计算，如上所示，另一种是读取上一步的波函数，即读取“.chk”文件，如下所示；</p>
+<pre><code>%nprocshared=64
+%oldchk=out-0.chk
+%chk=out-1.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz guess=read freq
+</code></pre>
+<h1 id="四-刚性扫描">四、刚性扫描</h1>
+<p>  需要注意的是，刚性扫描必须使用<strong>内坐标</strong>作为输入文件，且输入文件的命令行中，“<strong>scan</strong>”必须存在。</p>
+<h4 id="1-输入文件-4">1、输入文件</h4>
+<p>  下面是高斯输入文件的head，文件名的后缀必须为“.gjf”。</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/aug-cc-pvtz scan nosymm
+......
+   B10            1.53215566 250 0.100000
+</code></pre>
+<p>  PS：此处的<strong>nosymm</strong>是为了<strong>让高斯在计算种完全不利用对称性</strong>。</p>
+<h1 id="四-柔性扫描">四、柔性扫描</h1>
+<p>  与刚性扫描不同的是，柔性扫描既可以使用<strong>内坐标</strong>作为输入文件，也可以使用<strong>笛卡尔坐标</strong>，且输入文件的命令行中，是<strong>opt</strong>而非<strong>scan</strong>。</p>
+<h4 id="1-输入文件笛卡尔坐标">1、输入文件：笛卡尔坐标</h4>
+<p>  第一种情况，使用<strong>笛卡尔坐标</strong>,可以直接指定原子序数，由他们所构建的化学特征——键、角、二面角。</p>
+<pre><code>%nprocshared=64
+%chk=out.chk
+%mem=5000MW
+#p m062x/6-311G** opt=modredundant nosymm
+......
+D 1 5 8 11 S 36 10.00
+</code></pre>
+<h4 id="2-输入文件内坐标">2、输入文件：内坐标</h4>
+<pre><code>D4 35 S 36 10.00
+</code></pre>
+<p>  和刚性扫描的扫描参数一样。</p>
+<p>  PS：在使用高斯进行内坐标的设置及使用其进行扫描时，需要使用<strong>Atom list</strong>进行辅助，记得需要点开<strong>O</strong>功能项，方便选择到底进行哪个扫描，总共三列，从左向右依次分别为化学键、键角、二面角。</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#gaussian_01-%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97">Gaussian_01、基本计算</a></li>
+<li><a href="#%E4%B8%80-%E5%8D%95%E7%82%B9%E8%83%BD%E8%AE%A1%E7%AE%97">一、单点能计算</a><br>
+*<br>
+*<br>
+* <a href="#1-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6">1、输入文件</a></li>
+<li><a href="#%E4%BA%8C-%E7%BB%93%E6%9E%84%E4%BC%98%E5%8C%96">二、结构优化</a><br>
+*<br>
+*<br>
+* <a href="#1-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6-2">1、输入文件</a></li>
+<li><a href="#%E4%B8%89-%E9%A2%91%E7%8E%87%E8%AE%A1%E7%AE%97">三、频率计算</a><br>
+*<br>
+*<br>
+* <a href="#1-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6-3">1、输入文件</a></li>
+<li><a href="#%E5%9B%9B-%E5%88%9A%E6%80%A7%E6%89%AB%E6%8F%8F">四、刚性扫描</a><br>
+*<br>
+*<br>
+* <a href="#1-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6-4">1、输入文件</a></li>
+<li><a href="#%E5%9B%9B-%E6%9F%94%E6%80%A7%E6%89%AB%E6%8F%8F">四、柔性扫描</a><br>
+*<br>
+*<br>
+* <a href="#1-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9D%90%E6%A0%87">1、输入文件：笛卡尔坐标</a><br>
+* <a href="#2-%E8%BE%93%E5%85%A5%E6%96%87%E4%BB%B6%E5%86%85%E5%9D%90%E6%A0%87">2、输入文件：内坐标</a></li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://chnclkj.github.io/01_02_Orca_01/">
+              <span class="post-title">
+                ORCA_01、非双泛函wB97泛函的选择&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+            <span id="/post//" class="leancloud_visitors"
+              data-flag-title="Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描">
+              <em class="post-meta-item-text">阅读量 </em>
+              <i class="leancloud-visitors-count">loading...</i>
+            </span>
+            
+
+            
+            
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'jRokyK6R1fVDHzST5d73ulF6-gzGzoHsz',
+		appKey: 'TKWiiX0CUgRRuNd18wOGkdpy',
+		avatar: '',
+		pageSize: 10,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://chnclkj.github.io/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted">Copyright &copy;<span>chnclkj</span><br><a href="https://github.com/getgridea/gridea" class="Themeinfo">Powered by Gridea</a></p>
+        </div>
+      </div>
+    </div>
+   </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://chnclkj.github.io/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://chnclkj.github.io/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://chnclkj.github.io/";
+        addScript("https://chnclkj.github.io/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://chnclkj.github.io/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

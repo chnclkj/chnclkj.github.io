@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://chnclkj.github.io</id>
+    <title>chnclkj</title>
+    <updated>2024-04-29T11:52:43.698Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://chnclkj.github.io"/>
+    <link rel="self" href="https://chnclkj.github.io/atom.xml"/>
+    <subtitle>For Future! For Tomorrow!</subtitle>
+    <logo>https://chnclkj.github.io/images/avatar.png</logo>
+    <icon>https://chnclkj.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, chnclkj</rights>
+    <entry>
+        <title type="html"><![CDATA[毋恟之槑]]></title>
+        <id>https://chnclkj.github.io/04_00/</id>
+        <link href="https://chnclkj.github.io/04_00/">
+        </link>
+        <updated>2029-12-31T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C#学习]]></title>
+        <id>https://chnclkj.github.io/04_01_C_Sharp_Study_01/</id>
+        <link href="https://chnclkj.github.io/04_01_C_Sharp_Study_01/">
+        </link>
+        <updated>2024-04-25T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>这是学习C#语言的记录，谨以此记录。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这是学习C#语言的记录，谨以此记录。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[考博事记1]]></title>
+        <id>https://chnclkj.github.io/02_02_jishi_bo_1/</id>
+        <link href="https://chnclkj.github.io/02_02_jishi_bo_1/">
+        </link>
+        <updated>2023-11-12T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>这是一个记录，到底怎么考博士。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这是一个记录，到底怎么考博士。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[考博事记2——北京]]></title>
+        <id>https://chnclkj.github.io/02_02_jishi_bo_2/</id>
+        <link href="https://chnclkj.github.io/02_02_jishi_bo_2/">
+        </link>
+        <updated>2023-11-12T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>这是一个记录，到底怎么考博士。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这是一个记录，到底怎么考博士。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gaussian_01、高斯的输入、输出等]]></title>
+        <id>https://chnclkj.github.io/01_03_Gaussian_01/</id>
+        <link href="https://chnclkj.github.io/01_03_Gaussian_01/">
+        </link>
+        <updated>2023-10-19T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>  Gaussian的常规文件内容。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>  Gaussian的常规文件内容。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Gaussian_02、基本计算：单点能计算、结构计算、频率计算、刚性扫描和柔性扫描]]></title>
+        <id>https://chnclkj.github.io/01_03_Gaussian_02/</id>
+        <link href="https://chnclkj.github.io/01_03_Gaussian_02/">
+        </link>
+        <updated>2023-10-19T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>  Gaussian的使用，应当占据更大的比例。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>  Gaussian的使用，应当占据更大的比例。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ORCA_01、非双泛函wB97泛函的选择]]></title>
+        <id>https://chnclkj.github.io/01_02_Orca_01/</id>
+        <link href="https://chnclkj.github.io/01_02_Orca_01/">
+        </link>
+        <updated>2023-10-15T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ORCA_02、基于wB97X-V的优化基组]]></title>
+        <id>https://chnclkj.github.io/01_02_Orca_02/</id>
+        <link href="https://chnclkj.github.io/01_02_Orca_02/">
+        </link>
+        <updated>2023-10-15T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ORCA_03、关于Orca计算频率出现虚频的问题]]></title>
+        <id>https://chnclkj.github.io/01_02_Orca_03/</id>
+        <link href="https://chnclkj.github.io/01_02_Orca_03/">
+        </link>
+        <updated>2023-10-15T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ORCA_04、错误报告"ORCA finished by error termination in GSTEP"]]></title>
+        <id>https://chnclkj.github.io/01_02_Orca_04/</id>
+        <link href="https://chnclkj.github.io/01_02_Orca_04/">
+        </link>
+        <updated>2023-10-15T16:00:00.000Z</updated>
+    </entry>
+</feed>
